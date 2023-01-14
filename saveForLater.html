@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourites</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <!-- Link to use font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="scripts/sidenav.js"></script>
+
+</head>
+<body style="min-height: 100vh;">
+    <!-- Navbar -->
+    <header class="navbar bg-primary" role="presentation"> <!--role presenation helps screen readers with accessibility-->
+        <div class="container flex">
+
+            <!-- Logo pic and text -->
+            <div class="logo_container flex">
+                <div class="nav-img">
+                    <picture>
+                        <source type="image/webp" srcset="media/images/profile-pic.webp"/>
+                        <source type="image/png" srcset="media/images/profile-pic.jpg"/>
+                        <img src="media/images/profile-pic.jpg" alt="Profile picture" width="80">
+                    </picture>
+                </div>
+                <h2>dark scare</h2>
+            </div>
+
+            <!-- navigation links -->
+            <nav>
+                <ul role="presentation">
+                    <li class="hide"><a href="index.html">Home</a></li>
+                    <li class="hide"><a href="index.html#about">About</a></li>
+                    <li class="hide"><a href="schedule.html">Schedule</a></li>
+                    <li class="hide"><a href="#">Subscribe</a></li>
+                    <li class="hide"><a href="saveForLater.html">Saved</a></li>
+                        
+                <!-- Hamburger Icon -->
+                 <button class="lineContainer" id="line"  onclick="toggleMenu()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </button>
+  
+                  <!--Phone and Table Navigation-->
+                  <div id="mySidenav" class="sidenav">
+                    <div class="menu_links">
+                        <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                        <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+                        <li><a href="schedule.html" onclick="toggleMenu()">Schedule</a></li>
+                        <li><a href="#" onclick="toggleMenu()">Subscribe</a></li>
+                        <li><a href="saveForLater.html" onclick="toggleMenu()">Saved</a></li>
+                    </div>
+                    
+                  </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container" style="padding-bottom: 40px;">
+           <h1 class="fav-title">Your Favourites</h1>
+           <p id="fav-descript">Here you will find all your favourite items that you saved from my website, you can revisit this page at anytime. Your saves will only be deleted if you close this tab or browser and open up the website again. Apart from that enjoy!</p>
+
+           <ul id="yourFavs">
+                <!-- Populate this with your favourite from the saved arrays -->
+           </ul>
+        </div>
+    </div>
+   
+
+    <!-- Footer -->
+    <footer class="footer" style="position: relative; width: 100%; bottom: 0px;">
+        <div class="container flex">
+             <a href="https://www.twitch.tv/thereal_darkscare" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="mailto:wesleyir1@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="center">
+            <span>Made with <span class="heart">&hearts;</span> by Coder_Scare</span>
+        </div>
+    </footer>
+    
+    
+    
+    <script src="scripts/saveForLater.js"></script>
+</body>
+</html>

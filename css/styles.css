@@ -1,0 +1,892 @@
+/* Font Style using import - GoogleFonts */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600&family=Quicksand:wght@300;400;500;600&display=swap');
+
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* ---- Visual CSS styles that can be used on other stylesheets. Makes it easier to change styles globally of the website ---- */
+:root {
+    /* Background styles */
+    --bg-primary: rgba(0, 0, 0, 1);
+    --bg-secondary: rgba(0, 0, 0, 0.8);
+    --bg-purple: rgb(120, 54, 130);
+    --bg-purple-trans: rgba(120, 54, 130, 0.8);
+
+    /* Text styles */
+    --primary-text: #fff;
+    --secondary-text: rgb(232, 188, 239);
+    --form-text: rgb(201, 152, 209);
+    --primary-font: 'Mukta', sans-serif;
+    --secondary-font: 'Quicksand', sans-serif;
+
+    /* Button Styles */
+    --button-primary: rgb(8, 4, 10);
+
+    /* font-awesome icon styles */
+    --twitch: rgb(137, 40, 167);
+    --insta: rgb(172, 40, 148);
+    --email: rgb(137, 128, 128);
+}
+
+/* ---- Base Styles ---- */
+html {
+    max-height: 100%;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--primary-text);
+    line-height: 1.6;
+    background-image: url(../media/images/Dark-purple-leaves-background.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+h1, h2 {
+    font-weight: 500;
+    font-family: var(--secondary-font);
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+/* ---- Nav Bar ---- */
+/* Added fixed position so nav bar does not move on scroll and z-index of 2 so it stay above other content */
+.navbar {
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar img {
+    width: 60px;
+    max-width: 60px;
+    align-self: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.nav-img {
+    padding: 5px 10px 0 0;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar li {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.navbar .container {
+    padding: 0 60px;
+}
+
+.navbar {
+    font-weight: 400;
+}
+
+.navbar a:hover {
+    border-bottom: 2px var(--primary-text) solid;
+}
+
+/* Hamburger Button Syling */
+.lineContainer {
+    display: none; /* change later */
+  }
+  
+  .bar1, .bar2, .bar3 {
+      width: 36px;
+      height: 3.3px;
+      background-color: var(--primary-text);
+      margin: 8px 0;
+      transition: 0.4s;
+      border-radius: 7px;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-10px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-9px, -7px) ;
+    transform: rotate(45deg) translate(-10px, -7px) ;
+  }
+  
+  /* Side Navigation */
+  #mySidenav {
+    display: none;
+  }
+  
+  .sidenav {
+    height: 0;
+    width: 100%; 
+    position: fixed; /* Stay in place */
+    top: 70px;
+    right: 0;
+    z-index: 4; /* Stay on top */
+    background-color: var(--bg-primary);
+    overflow-y: hidden; 
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+   
+  }
+
+  /* The navigation menu links */
+.sidenav a {
+    padding: 15px 8px 8px 25px;
+    text-decoration: none;
+    /* font-size: 20px; */
+    font-weight: 400;
+    color: var(--primary-text);
+    display: block;
+    transition: 0.3s;  
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: var(--primary-text);
+    border-bottom: none;
+  }
+
+/* ---- Shift page down to adjust for navbar ---- */
+.content {
+    padding-top: 70px;
+}
+
+/* ---- Splash section ---- */
+.splash-section {
+    height: 600px;
+    position: relative;
+}
+
+.splash-section .grid {
+    overflow: visible;
+    grid-template-columns: 70% 30%;
+    gap: 10px;
+}
+
+/* -- Video -- */
+.video-section {
+    background-color: var(--bg-secondary);
+    padding: 20px 0;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.video-section .flex {
+    flex-direction: column;
+}
+
+.video-container video {
+    max-width: 100%;
+}
+
+.video-container .btn {
+    margin-top: 10px;
+    color: var(--secondary-text);
+    margin-bottom: 10px;
+}
+
+/* -- Form -- */
+.splash-section .card {
+    background-color: rgb(31, 19, 32);
+}
+
+.form {
+    position: relative;
+    top: 0;
+    min-height: 300px;
+    max-width: 500px;
+    /* min-width: 400px; */
+}
+
+.form h2 {
+    font-size: 28px;
+    z-index: 5;
+}
+
+.form .form-control {
+    margin: 20px 0;
+}
+
+.form input[type="text"],
+.form input[type="email"] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+    color: var(--form-text);
+    background-color: rgb(31, 19, 32);
+}
+
+/* Changes placeholder text colour */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--form-text);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--form-text);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--form-text);
+  }
+
+.form input:focus {
+    outline: none;
+}
+
+#message {
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    border: 1px solid #ddcccc;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(31, 19, 32);
+    caret-color: var(--form-text);
+    color: var(--form-text);
+}
+
+#message:focus,
+#message:hover {
+    outline: none;
+    border: 1px solid #bbb;
+}
+
+.form input[type="submit"] {
+    font-size: 14px;
+}
+
+/* ---- About me ---- */
+.about .grid {
+    padding: 100px;
+    grid-template-areas:
+        "info images";
+    grid-template-columns: 2fr 1fr;
+}
+
+.about .streamer-info {
+    grid-area: info;
+    align-self: start;
+    padding: 40px;
+}
+
+.about .card {
+    background-color: var(--bg-secondary);
+    color: var(--secondary-text);
+}
+
+.about .streamer-info h2 {
+    padding-bottom: 30px;
+    font-size: 36px;
+}
+
+.about .about-images {
+    grid-area: images;
+    justify-self: center;
+    display: grid;
+}
+
+/* Make images circular and overlap them diagonally top left, bottom right */
+.about-images .img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.img:first-of-type {
+    grid-column: 1/ span 2;
+    grid-row: 1 / span 2;
+}
+
+.img:last-of-type {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+}
+
+/* ---- My games I've played and currently play ---- */
+.games {
+    background-color: var(--bg-secondary);
+    padding: 20px 50px;
+}
+
+.games .card {
+    padding: 0;
+    background-color: var(--bg-purple);
+    border-radius: 0px;
+    /* border: 5px pink solid; */
+    aspect-ratio: 1 /1.25;
+}
+
+.card_title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--secondary-text);
+    padding: 5px;
+}
+
+.games .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.games .grid h3 {
+    margin-top: 20px;
+}
+
+.currently-played {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 0.25fr));
+}
+
+.games-played {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card_img {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    object-fit: cover;
+}
+
+.card_content {
+    background: var(--bg-secondary);
+    align-self: end;
+    margin: 8px 8px 10px;
+    padding: 8px;
+    box-shadow: 0 4px 16px rgb(0 0 0 / .1);
+}
+
+.haloResize {
+    object-position: 20% 50%;
+}
+
+.fortniteResize {
+    object-position: 5% 50%;
+}
+
+/* Leave your comment here */
+.leaveComment {
+    width: 100%;
+    text-align: center;
+}
+
+.leaveComment .card {
+    background-color: var(--bg-purple);
+}
+
+.leaveComment .form {
+    margin: 50px auto;
+}
+
+#comment {
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    border: 1px solid #ddcccc;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 100%;
+    margin-top: 10px;
+    height: 100px;
+    background-color: rgb(31, 19, 32);
+    caret-color: var(--form-text);
+    color: var(--form-text);
+}
+
+#comment:focus,
+#comment:hover {
+    outline: none;
+    border: 1px solid #bbb;
+}
+
+/* Style like and save this buttons */
+.save-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px var(--secondary-text) solid;
+    background-color: var(--bg-primary);
+    color: var(--secondary-text);
+}
+.like-btn {
+    display: inline-block;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px var(--secondary-text) solid;
+    background-color: var(--bg-primary);
+    color: var(--secondary-text);
+}
+
+.heartLike {
+    color: white;
+    font-size: 22px;
+    padding-left: 5px;
+}
+
+.save-btn:hover,
+.like-btn:hover {
+        transform: scale(.98);
+}
+/* ---- Footer ---- */
+.footer {
+    padding: 20px 0 5px;
+    background-color: var(--bg-primary);
+}
+
+.footer .container {
+    padding: 40px;
+}
+
+.footer .flex {
+    justify-content: start;
+}
+
+.footer a {
+    padding: 0 50px 0 0;
+}
+
+.footer i {
+    font-size: 30px;
+    transition: transform 0.2s;
+}
+
+.footer i:hover {
+    transform: scale(1.2);
+}
+
+.footer .fa-twitch {
+    color: var(--twitch);
+}
+
+.footer .fa-instagram {
+    color: var(--insta);
+}
+
+.footer .fa-envelope {
+    color: var(--email);
+}
+
+.footer .heart {
+    color: red;
+}
+
+/* ----------------------  Schedule Page Styling  ----------------------- */
+.schedule-container {
+    padding: 30px 20px 150px;
+}
+
+.table {
+    width: 100%;
+}
+
+caption {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.table, th, td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table th, .table td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--bg-purple-trans);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--bg-secondary);
+}
+
+/* ----------------------  Subscribe Page Styling  ----------------------- */
+.subscribe-container {
+    padding: 30px 20px 100px;
+}
+
+.subscribe-container .grid {
+    grid-template-columns: 1fr;
+}
+
+.subscribe-container .container {
+    max-width: 1000px;
+}
+
+.subscribe-container .card {
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    color: var(--secondary-text);
+}
+
+.subscribe-text .btn {
+    margin-top: 10px;
+}
+
+.radio-form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.radio-form .form {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.radio-form h3 {
+    font-size: 24px;
+}
+
+.radio-form .card {
+    background-color: var(--bg-purple-trans);
+    border: 4px solid var(--secondary-text);
+    color: var(--primary-text);
+}
+
+.radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.radio_input {
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+/* ---------------- Favourites sections --------------- */
+.fav-title {
+    padding-top: 20px;
+}
+
+#yourFavs {
+    width: 100%;
+    background: var(--secondary-text);
+    padding-top: 50px;
+    margin-top: 50px;
+}
+
+.fav-items {
+    display: grid;
+    overflow: visible;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 40px;
+    justify-items: center;
+    
+}
+
+.fav-items .form {
+    width: 500px;
+}
+.fav-items .card {
+    background-color: rgb(31, 19, 32);
+}
+
+.fav-items button {
+    display: none;
+}
+
+.fav-items .grid {
+    padding: 100px;
+    grid-template-areas:
+        "info images";
+    grid-template-columns: 2fr 1fr;
+}
+
+.fav-items .container {
+    grid-area: info;
+    align-self: start;
+    padding: 40px;
+}
+
+.fav-items .streamer-info {
+    background-color: var(--bg-secondary);
+    color: var(--secondary-text);
+}
+
+.fav-items .streamer-info h2 {
+    padding-bottom: 30px;
+    font-size: 36px;
+}
+
+.fav-items .about-images {
+    grid-area: images;
+    justify-self: center;
+    display: grid;
+}
+
+.fav-items .card_img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+/* ---- Media Queries ---- */
+@media (max-width: 1120px) {
+    .splash-section {
+        height: auto;
+    }
+
+    .splash-section .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form {
+        justify-self: center;
+        width: 100%;
+    }
+
+    .about .grid {
+        padding: 100px;
+        grid-template-areas:
+            "info"
+            "images";
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .fav-items .grid {
+        padding: 100px;
+        grid-template-areas:
+            "info"
+            "images";
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+/* Tablet and Under */
+@media (max-width: 700px) {
+    .navbar .container {
+        padding: 0 20px;
+    }
+
+    .nav-img {
+        width: 45px;
+        max-width: 100%;
+    }
+
+    .logo_container h2 {
+        font-size: 24px;
+        background-color: var(--bg-secondary);
+        border-radius: 10px;
+    }
+
+    .hide {
+        display: none;
+      }
+
+    
+    /* Hamburger Button Styling */
+    .lineContainer {
+        cursor: pointer;
+        position: relative;
+        background-color: Transparent;
+        border: none;
+        display: inline-block;
+        z-index: 5;
+        font-size: 36px;
+        color: red;
+        
+      }
+  
+      #mySidenav {
+        display: block;
+      }
+
+      .splash-section .container,
+      .about .container {
+        padding: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .about-images .img {
+        margin-bottom: 50px;
+    }
+
+    .fav-items .img {
+        margin-bottom: 50px;
+    }
+
+    /* Responsive Table */
+    .table thead {
+        display: none;
+    }
+
+    .table, 
+    .table tbody, 
+    .table tr,
+    .table td, 
+    caption{
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+
+  .table td::before{
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .table {
+    /* display: none; */
+    border: none;
+  }
+
+
+    
+}
+
+/* ---- Mobile Devices ---- */
+@media (max-width: 580px) {
+    .currently-played {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .subscribe-container .container {
+        padding: 0;
+    }
+
+   
+}
+
+@media (max-width: 500px) {
+    .streamer-info h2 {
+        width: 200px;
+    }
+    
+    .subscribe-container {
+        padding: 30px 5px 100px;
+    }
+
+    .subscribe-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .about-images .img {
+     max-width: 100%;
+     width: 200px;
+     height: 200px;
+    }
+}
+
+@media (max-width: 370px) {
+  .about .card {
+    /* margin: 0; */
+  }
+    section,
+    footer {
+        width: 400px;
+    }
+
+    .schedule-container {
+        padding: 10px 5px;
+        text-align: center;
+        width: 400px;
+    }
+
+    .subscribe-container {
+        padding: 30px 0px 100px;
+        width: 400px;
+    }
+}

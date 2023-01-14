@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subscribe</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <!-- Link to use font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="scripts/sidenav.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar bg-primary" role="presentation"> <!--role presenation helps screen readers with accessibility-->
+        <div class="container flex">
+
+            <!-- Logo pic and text -->
+            <div class="logo_container flex">
+                <div class="nav-img">
+                    <picture>
+                        <source type="image/webp" srcset="media/images/profile-pic.webp"/>
+                        <source type="image/png" srcset="media/images/profile-pic.jpg"/>
+                        <img src="media/images/profile-pic.jpg" alt="Profile picture" width="80">
+                    </picture>
+                </div>
+                <h2>dark scare</h2>
+            </div>
+
+            <!-- navigation links -->
+            <nav>
+                <ul role="presentation">
+                    <li class="hide"><a href="index.html">Home</a></li>
+                    <li class="hide"><a href="index.html#about">About</a></li>
+                    <li class="hide"><a href="schedule.html">Schedule</a></li>
+                    <li class="hide"><a href="#">Subscribe</a></li>
+                    <li class="hide"><a href="saveForLater.html">Saved</a></li>
+                        
+                <!-- Hamburger Icon -->
+                 <button class="lineContainer" id="line"  onclick="toggleMenu()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </button>
+  
+                  <!--Phone and Table Navigation-->
+                  <div id="mySidenav" class="sidenav">
+                    <div class="menu_links">
+                        <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                        <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+                        <li><a href="schedule.html" onclick="toggleMenu()">Schedule</a></li>
+                        <li><a href="#" onclick="toggleMenu()">Subscribe</a></li>
+                        <li><a href="saveForLater.html" onclick="toggleMenu()">Saved</a></li>
+                    </div>
+                    
+                  </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+       <div class="subscribe-container">
+        <div class="container grid">
+            <div class="subscribe-text card">
+                <h1>Why Subscribe?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque, corrupti voluptates illo, sint blanditiis a animi incidunt nostrum itaque modi mollitia? Odio sunt quas voluptatem inventore illo veritatis atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus excepturi voluptates. Ullam vitae ea fugit minima, molestias quae natus optio repellendus unde perspiciatis exercitationem ab illo commodi facere veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic perferendis rem mollitia iusto optio, velit quae minima odio officiis id soluta laborum debitis, delectus adipisci? Provident expedita ea voluptate minus?</p>
+                 <div class="center"><a href="#" class="btn btn-primary btn-outline ">Subscribe Now!</a></div>
+            </div>
+            <div class="radio-form">
+                <div class="form card">
+                    <h3 class="center">What do you want to see more of?</h3>
+                    <form action="" class="">   
+                        <div class="form-control">
+                            <label for="myRadioId" class="radio">
+                                <input type="radio" name="myRadioField" id="myRadioId" class="radio_input">
+                                TikTok Short Clips
+                            </label>
+                        </div>
+                        <div class="form-control">
+                            <label for="myRadioId" class="radio">
+                                <input type="radio" name="myRadioField" id="myRadioId" class="radio_input">
+                                YouTube Videos
+                            </label>
+                        </div>
+                        <div class="form-control">
+                            <label for="myRadioId" class="radio">
+                                <input type="radio" name="myRadioField" id="myRadioId" class="radio_input">
+                                Just Stream More!
+                            </label>
+                        </div>
+                          <div class="center"><input type="submit" value="Send" class="btn btn-primary btn-outline" class="radio_input"></div>  
+                    </form>
+            </div>
+        </div>
+       </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container flex">
+             <a href="https://www.twitch.tv/thereal_darkscare" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="mailto:wesleyir1@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="center">
+            <span>Made with <span class="heart">&hearts;</span> by Coder_Scare</span>
+        </div>
+    </footer>
+    
+    
+    
+    
+</body>
+</html>

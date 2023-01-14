@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dark scare</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <!-- Link to use font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="scripts/sidenav.js"></script>
+   
+
+</head>
+<body onload="load()">
+    <!-- Navbar -->
+    <header class="navbar bg-primary" role="presentation"> <!--role presenation helps screen readers with accessibility-->
+        <div class="container flex">
+
+            <!-- Logo pic and text -->
+            <div class="logo_container flex">
+                <div class="nav-img">
+                    <picture>
+                        <source type="image/webp" srcset="media/images/profile-pic.webp"/>
+                        <source type="image/png" srcset="media/images/profile-pic.jpg"/>
+                        <img src="media/images/profile-pic.jpg" alt="Profile picture" width="80">
+                    </picture>
+                </div>
+                <h2>dark scare</h2>
+            </div>
+
+            <!-- navigation links -->
+            <nav>
+                <ul role="presentation">
+                    <li class="hide"><a href="#">Home</a></li>
+                    <li class="hide"><a href="#about">About</a></li>
+                    <li class="hide"><a href="schedule.html">Schedule</a></li>
+                    <li class="hide"><a href="subscribe.html">Subscribe</a></li>
+                    <li class="hide"><a href="saveForLater.html">Saved</a></li>
+                        
+                <!-- Hamburger Icon -->
+                 <button class="lineContainer" id="line"  onclick="toggleMenu()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </button>
+  
+                  <!--Phone and Table Navigation-->
+                  <div id="mySidenav" class="sidenav">
+                    <div class="menu_links">
+                        <li><a href="#" onclick="toggleMenu()">Home</a></li>
+                        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                        <li><a href="schedule.html" onclick="toggleMenu()">Schedule</a></li>
+                        <li><a href="subscribe.html" onclick="toggleMenu()">Subscribe</a></li>
+                        <li><a href="saveForLater.html" onclick="toggleMenu()">Saved</a></li>
+                    </div>
+                    
+                  </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <!-- Splash content -->
+        <section class="splash-section" id="top">
+            <div class="container grid">
+                <div class="video-section center">
+                    <h1>Latest Video</h1>
+                    <div class="video-container flex">
+                        <!-- Added a video source with message for if video does not load on unsupported browser -->
+                        <video  width="720" controls controlsList="nodownload" alt="Twitch Video Clips">
+                            <source src="media/videos/Friday Shenanigans 16.12.22.mp4">
+                            Your browser does not support this video.
+                        </video>
+                        <a href="https://www.twitch.tv/thereal_darkscare" target="_blank" class="btn btn-primary btn-outline">My Twitch</a>
+                            <button class="save-btn">Save this</button>
+                            <button class="like-btn">Like <span class="heartLike">&hearts;</span></button>
+                    
+                    </div>
+                </div>
+                <div class="form card">
+                    <h2>Contact Us</h2>
+                    <form action="">   
+                        <div class="form-control">
+                            <input type="text" name="fname" placeholder="First Name" minlength="3" maxlength="20" pattern="[A-Za-z]}" required>
+                        </div>
+                        <div class="form-control">
+                            <input type="text" name="lname" placeholder="Last Name" minlength="3" maxlength="20" pattern="[A-Za-z]}" required>
+                        </div>
+                        <div class="form-control">
+                            <input type="email" name="email" placeholder="Email" minlength="3" pattern="[A-Za-z]}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        </div>
+                        <div class="form-control">
+                            <textarea name="message" id="message" placeholder="Type your message here..." minlength="3" maxlength="250"></textarea>
+                          </div>
+                          <div class="center"><input type="submit" value="Send" class="btn btn-primary"></div>  
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container grid">
+                <div class="streamer-info card">
+                    <h2><i>GamerTag</i>: dark scare</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam aliquam asperiores illum aspernatur repellat blanditiis reiciendis ab quis. Repellendus expedita officiis corrupti iste at, error aliquid exercitationem deserun Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quis optio quae alias vero molestiae, ullam tempora veritatis possimus ipsam consequatur nihil, corporis qui, quasi sapiente totam ut? Mollitia, similique! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, pariatur voluptates quam iure ipsa quos soluta nemo aliquam assumenda id dolorum porro totam dignissimos repellendus cumque recusandae maiores voluptate reiciendis.</p>
+                        <button class="save-btn">Save this</button>
+                        <button class="like-btn">Like <span class="heartLike">&hearts;</span></button>    
+                </div>
+                <div class="about-images">
+                        <picture class="img">
+                            <source type="image/webp" srcset="media/images/purple-pic.webp"/>
+                            <source type="image/jpg" srcset="media/images/purple-pic.jpg"/>
+                            <img src="media/images/purple-pic.jpg" alt="Purple image of streamer" width="80">
+                        </picture>
+                        <picture class="img">
+                            <source type="image/webp" srcset="media/images/masterchief.webp"/>
+                            <source type="image/jpg" srcset="media/images/masterchief.png"/>
+                            <img src="media/images/masterchief.png" alt="An image of MasterChief from the game Halo" width="80">
+                        </picture>
+                </div>
+            </div>
+        </section>
+
+        <!-- My games -->
+        <section class="games" id="games">
+            <h2>Games</h2>
+            <div class="grid">
+                <h3>Currently Playing</h3>
+                <div class="currently-played">
+                    <div class="card stacked">
+                        <picture class="game-img">
+                            <source type="image/webp" srcset="media/images/fifa23.webp"/>
+                            <source type="image/jpg" srcset="media/images/fifa23.jpg"/>
+                            <img src="media/images/fifa23.jpg" class="card_img" alt="Image of Fifa 23 cover" width="80">
+                        </picture>
+                        <div class="card_content">
+                            <h4 class="card_title">
+                                Fifa 23 
+                                <button class="save-btn">Save this</button>
+                                <button class="like-btn">Like <span class="heartLike">&hearts;</span></button>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="card stacked">
+                        <picture class="game-img">
+                            <source type="image/webp" srcset="media/images/warzone2.0.webp"/>
+                            <source type="image/jpg" srcset="media/images/warzone2.0.jpg"/>
+                            <img src="media/images/warzone2.0.jpg" class="card_img" alt="Image of Warzone 2.0 cover" width="80">
+                        </picture>
+                        <div class="card_content">
+                            <h4 class="card_title">
+                                Warzone 2.0 
+                                <button class="save-btn">Save this</button>
+                                <button class="like-btn">Like <span class="heartLike">&hearts;</span></button>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Games I've Played</h3>
+                <div class="games-played">
+                    <div class="card stacked">
+                        <picture class="game-img">
+                            <source type="image/webp" srcset="media/images/halo 3.webp"/>
+                            <source type="image/jpg" srcset="media/images/halo 3.jpg"/>
+                            <img src="media/images/halo 3.jpg" class="card_img haloResize" alt="Image of Halo 3 cover" width="80">
+                        </picture>
+                        <div class="card_content">
+                            <h4 class="card_title">
+                                Halo 3 
+                                    <button class="save-btn">Save this</button>
+                                    <button class="like-btn">Like <span class="heartLike">&hearts;</span></button>
+                    
+                                
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="card stacked">
+                        <picture class="game-img">
+                            <source type="image/webp" srcset="media/images/cod4.webp"/>
+                            <source type="image/jpg" srcset="media/images/cod4.jpg"/>
+                            <img src="media/images/cod4.jpg" class="card_img" alt="Image of Call of Duty 4 cover" width="80">
+                        </picture>
+                        <div class="card_content">
+                            <h4 class="card_title">
+                                Call Of Duty 4 
+                                    <button class="save-btn">Save this</button>
+                                    <button class="like-btn">Like <span class="heartLike">&hearts;</span></button>
+                                
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="card stacked">
+                        <picture class="game-img">
+                            <source type="image/webp" srcset="media/images/haloreach.webp"/>
+                            <source type="image/jpg" srcset="media/images/haloreach.jpg"/>
+                            <img src="media/images/haloreach.jpg" class="card_img" alt="Image of Halo Reach cover" width="80">
+                        </picture>
+                        <div class="card_content">
+                            <h4 class="card_title">
+                                Halo Reach 
+                                    <button class="save-btn">Save this</button>
+                                    <button class="like-btn">Like <span class="heartLike">&hearts;</span></button>
+                                
+                        </div>
+                    </div>
+                    <div class="card stacked">
+                        <picture class="game-img">
+                            <source type="image/webp" srcset="media/images/mw2.webp"/>
+                            <source type="image/jpg" srcset="media/images/mw2.jpg"/>
+                            <img src="media/images/mw2.jpg" class="card_img" alt="Image of Call of Duty Modern Warfare 2 cover" width="80">
+                        </picture>
+                        <div class="card_content">
+                            <h4 class="card_title">
+                                Call Of Duty: Modern Warefare 2 
+                                    <button class="save-btn">Save this</button>
+                                    <button class="like-btn">Like <span class="heartLike">&hearts;</span></button>
+
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="card stacked">
+                        <picture class="game-img">
+                            <source type="image/webp" srcset="media/images/fortnite.webp"/>
+                            <source type="image/jpg" srcset="media/images/fortnite.jpg"/>
+                            <img src="media/images/fortnite.jpg" class="card_img fortniteResize" alt="Image of Fortnite cover" width="80">
+                        </picture>
+                        <div class="card_content">
+                            <h4 class="card_title">
+                                Fortnite 
+                                    <button class="save-btn">Save this</button>
+                                    <button class="like-btn">Like <span class="heartLike">&hearts;</span></button>
+                            </h4>
+                        </div>
+                    </div>
+              </div>  
+            </div>
+        </section>
+
+        <section class="leaveComment container">
+            <div class="form card">
+                <h2>Type in your Comment</h2>
+                <form action="">   
+                    <div class="form-control">
+                        <textarea name="message" id="comment" placeholder="Type your comment here..." minlength="3" maxlength="250" required></textarea>
+                      </div>
+                      <div class="center"><input type="submit" value="Send" class="btn btn-primary"></div>  
+                </form>
+            </div>
+        </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container flex">
+             <a href="https://www.twitch.tv/thereal_darkscare" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="mailto:wesleyir1@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="center">
+            <span>Made with <span class="heart">&hearts;</span> by Coder_Scare</span>
+        </div>
+    </footer>
+      
+    <script src="scripts/saveForLater.js"></script>
+</body>
+</html>

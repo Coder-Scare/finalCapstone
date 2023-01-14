@@ -1,0 +1,39 @@
+Task: Create a save for later page for my website. 
+This functionality should save articles, images etc
+in a folder for the user to come back to and view later.
+
+
+Steps to accomplish this:
+1. Add an option on images and articles on my website to enable you to
+add them to save later folder??? [DONE]
+2. Create an alert that pops up everytime an item is added to the
+save later folder. This alert should tell the user how many items
+are in their "Save for later" folder.
+3. Create a new HTML page for "Save for later" folder which allows the
+user to see what is in their folder.
+
+
+Other Tasks Which are doable:
+Create a form which allows a user to leave comments.
+Create a form that allows a user to like an article or image (Will need to look into)
+Create a contact me form [DONE]
+
+Additional Information from Lecture T42 Video
+[Similar to a add to cart functionality in a website -
+But we are calling this save for later]
+
+****************************************************************
+-Make use of session or local storage to accomplish this.
+- Add a save button below desire images and text [DONE]
+- Create and call a function that looks for the item in html, 
+gets the items details, push it to an array and save that array within
+session storage. 
+- Go to save page and obain the array from session storage, 
+iterate through it, then rebuild page with content within session storage.
+
+Use multiple keys in sessionStorage to account for this.
+One key to save the array of items you want to save
+2nd key keep track of how many items have been added, 
+counter that as you click on save for later it increments by 1
+alerts the current value and saves back into sessionStorage
+[Both saved to sessionStorage]

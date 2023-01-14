@@ -1,0 +1,70 @@
+/* ---- Utility Classes ---- */
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+    color: var(--form-text);
+}
+
+.stacked {
+    display: grid;
+}
+
+.stacked > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+/* ---- Button Styling ---- */
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-outline {
+    border: 1px var(--secondary-text) solid;
+    
+}
+
+.btn:hover {
+    transform: scale(.98);
+}
+
+/* ---- Background Colors ---- */
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+
+.btn-primary {
+    background-color: var(--button-primary);
+    color: var(--secondary-text);
+}
